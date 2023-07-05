@@ -1,20 +1,22 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import { useState } from 'react';
+import { NavigationContainer } from '@react-navigation/native';
+import { MainStack } from './src/navigation/MainStack';
+import { TendersProvider } from './src/context/TendersContext';
 
 export default function App() {
+  const [tenders, setTenders] = useState([]);
+
+  const addTenders = (tender) => {
+    setTenders([...tender]);
+  };
   return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
+    <TendersProvider value={{
+      tenders,
+      addTenders,
+    }}>
+      <NavigationContainer>
+        <MainStack />
+      </NavigationContainer>
+    </TendersProvider>
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
