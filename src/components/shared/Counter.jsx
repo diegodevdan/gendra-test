@@ -14,13 +14,13 @@ const Counter = ({ max = 10, min = 0, step = 1, setCount, initialCount = min }) 
     }
     return (
         <View style={styles.main}>
-            <TouchableOpacity style={[styles.page, styles.arrow, styles.arrowLeft]} onPress={() => handlePage(false)}>
+            <TouchableOpacity testID="chevron-decrement" style={[styles.page, styles.arrow, styles.arrowLeft]} onPress={() => handlePage(false)}>
                 <FontAwesome5 name="chevron-left" size={20} color="black" />
             </TouchableOpacity>
             <View style={[styles.page, styles.current]} >
                 <Text style={styles.currentNumber}>{count}</Text>
             </View>
-            <TouchableOpacity style={[styles.page, styles.arrow, styles.arrowRight]} onPress={() => handlePage(true)}>
+            <TouchableOpacity testID="chevron-increment" style={[styles.page, styles.arrow, styles.arrowRight]} onPress={() => handlePage(true)}>
                 <FontAwesome5 name="chevron-right" size={20} color="black" />
             </TouchableOpacity>
         </View>

@@ -29,7 +29,7 @@ const Pagination = ({ numberOfPages, setPage, page = 1 }) => {
     }, [page])
     return (
         <View style={styles.main}>
-            <TouchableOpacity style={[styles.page, styles.arrow, styles.arrowLeft]} onPress={() => handlePage(false)}>
+            <TouchableOpacity testID="previous-button" style={[styles.page, styles.arrow, styles.arrowLeft]} onPress={() => handlePage(false)}>
                 <FontAwesome5 name="chevron-left" size={20} color="black" />
             </TouchableOpacity>
             {pages.map((page, i) =>
@@ -47,7 +47,7 @@ const Pagination = ({ numberOfPages, setPage, page = 1 }) => {
                     <Text style={currentPage >= numberOfPages ? styles.currentNumber : {}} numberOfLines={1}>{numberOfPages}</Text>
                 </TouchableOpacity>
             }
-            <TouchableOpacity style={[styles.page, styles.arrow, styles.arrowRight]} onPress={() => handlePage(true)}>
+            <TouchableOpacity testID="next-button" style={[styles.page, styles.arrow, styles.arrowRight]} onPress={() => handlePage(true)}>
                 <FontAwesome5 name="chevron-right" size={20} color="black" />
             </TouchableOpacity>
         </View>
