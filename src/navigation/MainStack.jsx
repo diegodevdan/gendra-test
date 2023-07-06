@@ -11,9 +11,6 @@ export const MainStack = () => {
         headerStyle: {
           backgroundColor: '#243033',
         },
-        headerTitleStyle: {
-          color: '#fff',
-        },
         headerTintColor: '#fff',
       }}
     >

@@ -40,3 +40,7 @@ npm run start -c
 1. At the terminal where the project runs, press `"c"` to show the QR code
 2. Open the Camera app on your device
 3. Scan the QR code
+
+
+## Improvements
+Manage the state to save the results of queries made to the api to improve the user experience when scrolling through the page.

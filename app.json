@@ -1,6 +1,6 @@
 {
   "expo": {
-    "name": "gendra-test",
+    "name": "Gendra Test",
     "slug": "gendra-test",
     "version": "1.0.0",
     "orientation": "portrait",
@@ -17,14 +17,25 @@
     "ios": {
       "supportsTablet": true
     },
+    "androidStatusBar": {
+      "barStyle": "light-content",
+      "backgroundColor": "#243033"
+    },
     "android": {
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#ffffff"
-      }
+      },
+      "package": "com.diegodevdan.gendra",
+      "versionCode": 1
     },
     "web": {
       "favicon": "./assets/favicon.png"
+    },
+    "extra": {
+      "eas": {
+        "projectId": "01a8924e-f8cb-4005-98d5-8b887669279a"
+      }
     }
   }
 }
